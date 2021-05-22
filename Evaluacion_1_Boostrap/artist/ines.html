@@ -95,12 +95,29 @@
                 <p><b>Nombre de Obra</b>: Sent</p>
                 <p><b>Historia</b>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum autem aperiam doloribus maiores repellendus harum officia consequuntur necessitattes?</p>
                 <p><b>Descripción</b>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reprehenderit dignissimos recusandae qui corrupti. Temporibus quisquam amet fuga, officiis repellat autem vel et porro eum sint dignissimos iure odit dolorum.</p>
-                <p><b>Precio</b>: 30000$</p>
+                <p><b>Precio</b>: $300.000</p>
                 <p><b>Tecnica Usada</b>: Ls Isout Lidk</p>
             </div>
             
 
             </div>
+<script>
+                $.getJSON(`https://mindicador.cl/api`, function(valueConvert){
+                    $("<span/>",{
+                        html: (valueConvert.dolar.valor)}).appendTo(document.getElementById('valor-dolar'));
+
+                })
+            
+            </script>
+             <div class="container">
+                <div class="section">
+                    <button type="button" class="btn btn-primary" id="dolar">Valor en Dolar</button>
+                </div>
+                <div class="section">
+                    <ul id="resultado"> </ul>
+                </div>
+            </div>
+            
 
 
             <!-- Optional JavaScript -->
